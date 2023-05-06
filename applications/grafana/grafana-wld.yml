@@ -4,10 +4,10 @@ metadata:
   name: grafana-wld
 spec:
   workloads:
-    - name: {{.Values.name}}-deployment
+    - name: grafana-deployment
       namespace: {{.Values.namespace}}
       type: Deployment
-      baseOndemandCapacity: {{.Values.baseOndemandCapacity}}
+      baseOndemandCapacity: 2
   distribution:
     spot: 6
     ondemand: 2
