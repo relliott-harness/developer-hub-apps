@@ -1,7 +1,7 @@
 apiVersion: ccm.harness.io/v1
 kind: WorkloadDistributor
 metadata:
-  name: wld-{{.Values.name}}
+  name: grafana-wld
 spec:
   workloads:
     - name: {{.Values.name}}-deployment
@@ -9,5 +9,5 @@ spec:
       type: Deployment
       baseOndemandCapacity: {{.Values.baseOndemandCapacity}}
   distribution:
-    spot: {{.Values.distribution.spot}}
-    ondemand: {{.Values.distribution.ondemand}}
+    spot: 6
+    ondemand: 2
