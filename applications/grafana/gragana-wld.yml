@@ -1,0 +1,13 @@
+apiVersion: ccm.harness.io/v1
+kind: WorkloadDistributor
+metadata:
+  name: wld-{{.Values.name}}
+spec:
+  workloads:
+    - name: {{.Values.name}}-deployment
+      namespace: {{.Values.namespace}}
+      type: Deployment
+      baseOndemandCapacity: {{.Values.baseOndemandCapacity}}
+  distribution:
+    spot: {{.Values.distribution.spot}}
+    ondemand: {{.Values.distribution.ondemand}}
