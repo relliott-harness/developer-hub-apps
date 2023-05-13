@@ -5,7 +5,7 @@ metadata:
 spec:
   workloads:
     - name: grafana-deployment
-      namespace: apps
+      namespace: dev
       type: Deployment
       baseOndemandCapacity: 2
   distribution:
